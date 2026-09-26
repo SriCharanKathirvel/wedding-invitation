@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wedding Invitation | Sri Charan & Pradeepika</title>
+  <meta name="description" content="Auspicious South Indian Tamil Wedding Invitation of Sri Charan and Pradeepika. Join us on 15.11.2026 at Sri Velan Mahal, Avalpoondurai, Erode.">
+  <meta name="theme-color" content="#028090">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦚</text></svg>">
+
+  <!-- Google Fonts: Tamil (Baloo Thambi 2, Mukta Malar, Arima) & English (Playfair Display, Cinzel, Great Vibes, Outfit) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Arima:wght@400;600;700;800;900&family=Baloo+Thambi+2:wght@500;600;700;800&family=Cinzel:wght@500;600;700;900&family=Great+Vibes&family=Mukta+Malar:wght@400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="lang-en">
+
+  <!-- High-Performance Canvas for Falling Jasmine & Marigold Petals -->
+  <canvas id="petals-canvas"></canvas>
+
+  <!-- Sticky Top Glassmorphic Navigation & Control Bar -->
+  <header class="top-header" id="main-header">
+    <div class="header-container">
+      
+      <!-- Brand & Sacred Shloka -->
+      <a href="#hero" class="header-brand" id="brand-link" aria-label="Go to Top">
+        <!-- Sacred Golden Vel SVG Mini -->
+        <svg class="sacred-vel-mini" viewBox="0 0 40 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="velGoldMini" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#FFE8A3"/>
+              <stop offset="50%" stop-color="#F4A261"/>
+              <stop offset="100%" stop-color="#E7A93B"/>
+            </linearGradient>
+          </defs>
+          <!-- Vel Blade -->
+          <path d="M20 2 C12 12 6 22 6 32 C6 39 12 43 18 43 L18 58 L22 58 L22 43 C28 43 34 39 34 32 C34 22 28 12 20 2 Z" fill="url(#velGoldMini)" stroke="#FFE8A3" stroke-width="1"/>
+          <!-- Sacred Center Spine & Trishul Base -->
+          <path d="M20 5 L20 42" stroke="#FFF9D2" stroke-width="1.5" stroke-linecap="round"/>
+          <circle cx="20" cy="24" r="2.5" fill="#FFE8A3"/>
+        </svg>
+        <div class="brand-text">
+          <span class="brand-shloka" data-i18n="headerShloka">OM SARAVANA BHAVA</span>
+          <span class="brand-sub" data-i18n="headerSub">Auspicious Wedding Invitation</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="header-nav" id="desktop-nav" aria-label="Main Navigation">
+        <a href="#hero" class="nav-link" data-i18n="navHome">Home</a>
+        <a href="#countdown" class="nav-link" data-i18n="navCountdown">Countdown</a>
+        <a href="#schedule" class="nav-link" data-i18n="navSchedule">Schedule</a>
+        <a href="#venue" class="nav-link" data-i18n="navVenue">Venue</a>
+        <a href="#blessings" class="nav-link" data-i18n="navBlessings">Blessings</a>
+      </nav>
+
+      <!-- Action Controls: Language Toggle, Music Player & Petals Toggle -->
+      <div class="header-actions">
+        
+        <!-- Language Switcher Pill Toggle -->
+        <div class="lang-switcher-wrapper" role="group" aria-label="Language Selector">
+          <button type="button" class="lang-btn" id="btn-lang-ta" aria-pressed="false">
+            <span>தமிழ்</span>
+          </button>
+          <button type="button" class="lang-btn active" id="btn-lang-en" aria-pressed="true">
+            <span>English</span>
+          </button>
+        </div>
+
+        <!-- Background Music Player Toggle Button -->
+        <button type="button" class="audio-btn" id="btn-audio-toggle" title="மங்கல இசை (நாகஸ்வரம் & தவில்) / Auspicious Wedding Music" aria-label="Toggle Wedding Music">
+          <div class="music-wave" aria-hidden="true">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+          <span id="audio-btn-label" data-i18n="audioPlay">மங்கல இசை</span>
+        </button>
+
+        <!-- Petals Animation Toggle -->
+        <button type="button" class="petal-toggle-btn active" id="btn-petal-toggle" title="பூமழை நிறுத்து/தொடங்கு / Toggle Floral Shower" aria-label="Toggle Flower Petals">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+            <path d="M12 2C13.5 4.5 15 7.5 15 10C15 11.5 14 12.8 12.8 13.3C13.8 14.5 14.5 16 14.5 17.5C14.5 19.5 13 21 11 21C9 21 7.5 19.5 7.5 17.5C7.5 15.5 8.5 13.8 10 12.8C9.2 12.3 8.5 11.2 8.5 10C8.5 7.5 10.5 4.5 12 2Z"/>
+            <path d="M17.5 8C19 9.5 21 11.5 21 13.5C21 15 19.8 16 18.5 16C17 16 16 14.8 16 13.5C16 12 16.8 10 17.5 8Z" opacity="0.7"/>
+          </svg>
+        </button>
+
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Sacred Mango Leaf Garland (Thoranam) Border Accent -->
+  <div class="thoranam-garland" aria-hidden="true"></div>
+
+  <!-- MAIN WRAPPER -->
+  <main id="main-content">
+
+    <!-- ==========================================================================
+         HERO SECTION: TEMPLE GOPURAM, SACRED VEL, COUPLE MINGLING
+         ========================================================================== -->
+    <section class="hero-section" id="hero">
+      
+      <!-- Subtle Gold-Embossed Temple Gopuram Vector Silhouette -->
+      <svg class="temple-gopuram-backdrop" id="temple-gopuram-svg" viewBox="0 0 600 500" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+          <linearGradient id="gopuramGold" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#FFE8A3" stop-opacity="0.9"/>
+            <stop offset="40%" stop-color="#F4A261" stop-opacity="0.6"/>
+            <stop offset="80%" stop-color="#E7A93B" stop-opacity="0.3"/>
+            <stop offset="100%" stop-color="#028090" stop-opacity="0.05"/>
+          </linearGradient>
+        </defs>
+        <!-- 7 Kalasams on Apex -->
+        <path d="M260 40 L260 25 L263 20 L265 25 L265 40 Z" fill="url(#gopuramGold)"/>
+        <path d="M272 35 L272 18 L275 14 L278 18 L278 35 Z" fill="url(#gopuramGold)"/>
+        <path d="M285 30 L285 12 L288 8 L291 12 L291 30 Z" fill="url(#gopuramGold)"/>
+        <path d="M298 25 L298 5 L301 0 L304 5 L304 25 Z" fill="url(#gopuramGold)"/>
+        <path d="M311 30 L311 12 L314 8 L317 12 L317 30 Z" fill="url(#gopuramGold)"/>
+        <path d="M324 35 L324 18 L327 14 L330 18 L330 35 Z" fill="url(#gopuramGold)"/>
+        <path d="M336 40 L336 25 L339 20 L341 25 L341 40 Z" fill="url(#gopuramGold)"/>
+        <!-- Crown Ridge (Thirumudikoodam) -->
+        <path d="M245 45 C270 38 330 38 355 45 L365 55 L235 55 Z" fill="url(#gopuramGold)"/>
+        <!-- Tier 1 -->
+        <path d="M230 58 L370 58 L378 80 L222 80 Z" stroke="url(#gopuramGold)" stroke-width="1.8"/>
+        <path d="M245 80 L245 62 M275 80 L275 62 M300 80 L300 62 M325 80 L325 62 M355 80 L355 62" stroke="url(#gopuramGold)" stroke-width="1.2"/>
+        <!-- Tier 2 -->
+        <path d="M215 84 L385 84 L395 116 L205 116 Z" stroke="url(#gopuramGold)" stroke-width="1.8"/>
+        <path d="M235 116 L235 88 M270 116 L270 88 M300 116 L300 88 M330 116 L330 88 M365 116 L365 88" stroke="url(#gopuramGold)" stroke-width="1.2"/>
+        <!-- Tier 3 -->
+        <path d="M198 120 L402 120 L414 160 L186 160 Z" stroke="url(#gopuramGold)" stroke-width="2"/>
+        <path d="M225 160 L225 124 M265 160 L265 124 M300 160 L300 124 M335 160 L335 124 M375 160 L375 124" stroke="url(#gopuramGold)" stroke-width="1.2"/>
+        <!-- Tier 4 -->
+        <path d="M178 165 L422 165 L436 215 L164 215 Z" stroke="url(#gopuramGold)" stroke-width="2"/>
+        <path d="M210 215 L210 170 M255 215 L255 170 M300 215 L300 170 M345 215 L345 170 M390 215 L390 170" stroke="url(#gopuramGold)" stroke-width="1.2"/>
+        <!-- Tier 5 -->
+        <path d="M156 220 L444 220 L460 280 L140 280 Z" stroke="url(#gopuramGold)" stroke-width="2.2"/>
+        <path d="M195 280 L195 225 M250 280 L250 225 M300 280 L300 225 M350 280 L350 225 M405 280 L405 225" stroke="url(#gopuramGold)" stroke-width="1.4"/>
+        <!-- Tier 6 (Base Tier) -->
+        <path d="M132 286 L468 286 L488 360 L112 360 Z" stroke="url(#gopuramGold)" stroke-width="2.5"/>
+        <path d="M180 360 L180 292 M240 360 L240 292 M300 360 L300 292 M360 360 L360 292 M420 360 L420 292" stroke="url(#gopuramGold)" stroke-width="1.4"/>
+        <!-- Grand Temple Entrance Gateway (Thiru Vaasal) -->
+        <path d="M100 365 L500 365 L500 480 L100 480 Z" stroke="url(#gopuramGold)" stroke-width="2.5"/>
+        <path d="M250 480 L250 395 C250 375 350 375 350 395 L350 480 Z" stroke="url(#gopuramGold)" stroke-width="2.5" fill="rgba(244, 162, 97, 0.08)"/>
+        <!-- Decorative Pillar Carvings -->
+        <circle cx="300" cy="405" r="10" stroke="url(#gopuramGold)" stroke-width="1.5"/>
+      </svg>
+
+      <!-- Slow Rotating Kolam Mandala Background Motif -->
+      <svg class="sacred-mandala-bg" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="100" cy="100" r="90" stroke="#FFE8A3" stroke-width="0.8" stroke-dasharray="4 4"/>
+        <circle cx="100" cy="100" r="75" stroke="#F4A261" stroke-width="1"/>
+        <circle cx="100" cy="100" r="50" stroke="#FFE8A3" stroke-width="0.8"/>
+        <circle cx="100" cy="100" r="25" stroke="#F4A261" stroke-width="1"/>
+        <path d="M100 10 L100 190 M10 100 L190 100 M36 36 L164 164 M36 164 L164 36" stroke="#FFE8A3" stroke-width="0.6"/>
+        <!-- Lotus Petals in Mandala -->
+        <path d="M100 25 C115 50 115 75 100 100 C85 75 85 50 100 25 Z" stroke="#FFE8A3" stroke-width="0.7"/>
+        <path d="M100 175 C115 150 115 125 100 100 C85 125 85 150 100 175 Z" stroke="#FFE8A3" stroke-width="0.7"/>
+        <path d="M25 100 C50 115 75 115 100 100 C75 85 50 85 25 100 Z" stroke="#FFE8A3" stroke-width="0.7"/>
+        <path d="M175 100 C150 115 125 115 100 100 C125 85 150 85 175 100 Z" stroke="#FFE8A3" stroke-width="0.7"/>
+      </svg>
+
+      <div class="hero-content">
+
+        <!-- Sacred Lord Murugan's Vel Motif at Top Header / Blessings Section -->
+        <div class="sacred-vel-container">
+          <svg class="sacred-vel-hero" viewBox="0 0 60 90" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sacred Lord Murugan Golden Vel">
+            <defs>
+              <linearGradient id="velGoldRadiant" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#FFF9D2"/>
+                <stop offset="35%" stop-color="#FFD166"/>
+                <stop offset="70%" stop-color="#F4A261"/>
+                <stop offset="100%" stop-color="#C9881A"/>
+              </linearGradient>
+              <radialGradient id="velShine" cx="50%" cy="35%" r="60%">
+                <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.8"/>
+                <stop offset="100%" stop-color="#F4A261" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
+            <!-- Leaf-shaped Sacred Vel Blade -->
+            <path d="M30 4 C18 18 10 32 10 46 C10 56 18 62 26 62 L26 84 C26 86 28 88 30 88 C32 88 34 86 34 84 L34 62 C42 62 50 56 50 46 C50 32 42 18 30 4 Z" fill="url(#velGoldRadiant)" stroke="#FFF9D2" stroke-width="1.6"/>
+            <!-- Highlight Reflection -->
+            <path d="M30 8 C22 20 16 32 16 44 C16 51 22 55 28 55 L28 80 L32 80 L32 55 C38 55 44 51 44 44 C44 32 38 20 30 8 Z" fill="url(#velShine)" opacity="0.45"/>
+            <!-- Central Spine Rib -->
+            <line x1="30" y1="10" x2="30" y2="60" stroke="#FFF2A1" stroke-width="2" stroke-linecap="round"/>
+            <!-- Sacred Om & Murugan Dot -->
+            <circle cx="30" cy="34" r="3.5" fill="#FFF9D2" filter="drop-shadow(0 0 4px #FFD166)"/>
+            <!-- Trishul Base Accent -->
+            <path d="M22 62 C26 66 34 66 38 62" stroke="#FFF9D2" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <div class="sacred-blessing-text" data-i18n="heroBlessing">|| SEEKING DIVINE BLESSINGS || OM SARAVANA BHAVA ||</div>
+          <div class="sacred-sub-shloka" data-i18n="heroSubBlessing">With the divine grace of Almighty and elders' cherished blessings</div>
+        </div>
+
+        <!-- Wedding Invitation Title -->
+        <span class="wedding-super-title" data-i18n="invitationSuper">The Auspicious Union</span>
+        <h1 class="wedding-main-title" data-i18n="invitationMain">Wedding Invitation</h1>
+        <p class="invitation-quote" data-i18n="heroQuote">
+          "Two souls, one heart — we cordially invite you to celebrate the joyous dawn of our lifelong journey together."
+        </p>
+
+        <!-- ==================================================================
+             SEAMLESS COUPLE ILLUSTRATION MINGLING WITH WEBPAGE
+             Transparent floating overlays, glowing ambient drop-shadows, soft radial gradients, parallax float
+             ================================================================== -->
+        <div class="couple-showcase-wrapper" id="couple-wrapper">
+          
+          <!-- Glowing Ambient Backlight Aura (Bluish-Green & Gold) -->
+          <div class="couple-ambient-glow" aria-hidden="true"></div>
+
+          <!-- Subtle Golden Arch Halo -->
+          <div class="couple-halo-arch" aria-hidden="true"></div>
+
+          <!-- Seamless Floating Illustration Container -->
+          <div class="couple-mingle-container">
+            <!-- Tamil Traditional Mode: couple_traditional.png (Pattu Vesti & Silk Shirt, Pinkish-Red Kanchipuram Silk Saree) -->
+            <img src="couple_traditional.png?v=3" 
+                 id="couple-img-traditional" 
+                 class="couple-img" 
+                 alt="மணமக்கள் ஸ்ரீ சரண் மற்றும் பிரதீபிகா - பாரம்பரிய பட்டு வேஷ்டி & காஞ்சிபுரம் பட்டுப்புடவையில்"
+                 loading="lazy">
+
+            <!-- English Modern Mode: couple_modern.png (Navy Blue Suit, Peacock Blue Silk Saree) -->
+            <img src="couple_modern.png?v=3" 
+                 id="couple-img-modern" 
+                 class="couple-img active" 
+                 alt="Groom Sri Charan and Bride Pradeepika in Navy Blue Suit and Peacock Blue Saree"
+                 loading="eager">
+          </div>
+
+          <!-- Floating Attire Tag Badge -->
+          <div class="attire-tag" id="attire-tag-badge" data-i18n="attireTraditional">
+            Navy Blue Suit &amp; Peacock Blue Kanchipuram Silk Saree
+          </div>
+
+        </div>
+
+        <!-- Couple Names & Family Lineage Glass Card -->
+        <div class="couple-names-card">
+          
+          <div class="couple-names-display">
+            <span class="couple-name-groom" id="groom-name" data-i18n="groomName">Sri Charan</span>
+            <span class="couple-ampersand">&amp;</span>
+            <span class="couple-name-bride" id="bride-name" data-i18n="brideName">Pradeepika</span>
+          </div>
+
+          <!-- Family Lineage Grid (மணமகன் & மணமகள் பெற்றோர் விபரம்) -->
+          <div class="family-lineage-grid">
+            
+            <!-- Groom's Family Side -->
+            <div class="family-col">
+              <div class="family-role" data-i18n="groomLabel">Groom</div>
+              <div class="family-details">
+                <span class="family-parents" data-i18n="groomParents">Mr. K. Kathirvel &amp; Mrs. K. Poongodi</span>
+                <div class="family-native" data-i18n="groomParentsSub">Beloved Son • Erode</div>
+              </div>
+            </div>
+
+            <!-- Bride's Family Side -->
+            <div class="family-col">
+              <div class="family-role" data-i18n="brideLabel">Bride</div>
+              <div class="family-details">
+                <span class="family-parents" data-i18n="brideParents">Mr. P. Raghupathi &amp; Mrs. K. Kalaivani</span>
+                <div class="family-native" data-i18n="brideParentsSub">Beloved Daughter • Erode</div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Auspicious Muhurtham Highlight Date Banner -->
+          <div class="muhurtham-highlight-banner">
+            <span class="muhurtham-date-text" data-i18n="heroDate">15th November 2026 • Sunday</span>
+            <span class="muhurtham-dot" aria-hidden="true"></span>
+            <span class="muhurtham-date-text" data-i18n="heroTime">5:00 AM - 6:00 AM IST</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Ornamental Section Divider with Peacock Feathers -->
+    <div class="section-divider-ornament" aria-hidden="true">
+      <div class="divider-line"></div>
+      <div class="divider-center-icon">
+        <svg class="peacock-feather-icon" viewBox="0 0 50 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="peacockGoldEye" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#FFE8A3"/>
+              <stop offset="50%" stop-color="#F4A261"/>
+              <stop offset="100%" stop-color="#E7A93B"/>
+            </linearGradient>
+            <radialGradient id="peacockTealEye" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#023E8A"/>
+              <stop offset="45%" stop-color="#00A896"/>
+              <stop offset="85%" stop-color="#02C39A"/>
+              <stop offset="100%" stop-color="#FFE8A3"/>
+            </radialGradient>
+          </defs>
+          <!-- Feather Stem -->
+          <path d="M25 65 C25 45 25 25 25 5" stroke="#F4A261" stroke-width="1.8" stroke-linecap="round"/>
+          <!-- Iridescent Feather Eye Outer -->
+          <ellipse cx="25" cy="22" rx="16" ry="19" fill="url(#peacockGoldEye)" stroke="#FFE8A3" stroke-width="1"/>
+          <!-- Feather Eye Inner Teal/Cyan -->
+          <ellipse cx="25" cy="23" rx="11" ry="13" fill="url(#peacockTealEye)"/>
+          <!-- Royal Center Core -->
+          <ellipse cx="25" cy="24" rx="5" ry="6" fill="#01131C"/>
+          <circle cx="25" cy="22" r="1.5" fill="#48E5C2"/>
+          <!-- Barbs -->
+          <path d="M25 35 C15 37 8 45 6 52 M25 35 C35 37 42 45 44 52" stroke="#02C39A" stroke-width="1" stroke-linecap="round"/>
+          <path d="M25 45 C17 48 12 55 10 60 M25 45 C33 48 38 55 40 60" stroke="#F4A261" stroke-width="1" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="divider-line"></div>
+    </div>
+
+    <!-- ==========================================================================
+         LIVE WEDDING COUNTDOWN TIMER & ADD TO CALENDAR SECTION
+         Counting down to 15.11.2026, 5:00 AM IST
+         ========================================================================== -->
+    <section class="countdown-section" id="countdown">
+      
+      <div class="countdown-glass-card">
+        
+        <div class="section-header">
+          <span class="section-tag" data-i18n="countdownTag">சுபமுகூர்த்த நல்வேளை</span>
+          <h2 class="section-title" data-i18n="countdownTitle">சுபமுகூர்த்த கவுண்டவுன்</h2>
+          <p class="section-subtitle" data-i18n="countdownSub">
+            15 நவம்பர் 2026 • ஞாயிற்றுக்கிழமை அதிகாலை 5:00 மணி
+          </p>
+        </div>
+
+        <!-- 4 Glassmorphic Countdown Blocks -->
+        <div class="countdown-grid" role="timer" aria-label="Wedding Countdown Timer">
+          
+          <div class="countdown-item">
+            <div class="countdown-val" id="count-days">00</div>
+            <div class="countdown-label" data-i18n="labelDays">நாட்கள்</div>
+          </div>
+
+          <div class="countdown-item">
+            <div class="countdown-val" id="count-hours">00</div>
+            <div class="countdown-label" data-i18n="labelHours">மணி</div>
+          </div>
+
+          <div class="countdown-item">
+            <div class="countdown-val" id="count-minutes">00</div>
+            <div class="countdown-label" data-i18n="labelMinutes">நிமிடம்</div>
+          </div>
+
+          <div class="countdown-item">
+            <div class="countdown-val" id="count-seconds">00</div>
+            <div class="countdown-label" data-i18n="labelSeconds">நொடி</div>
+          </div>
+
+        </div>
+
+        <!-- Add to Calendar Interactive Action -->
+        <div class="calendar-action-wrapper">
+          <button type="button" class="btn-add-calendar" id="btn-calendar-trigger" aria-haspopup="true" aria-expanded="false">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+              <line x1="16" y1="2" x2="16" y2="6"/>
+              <line x1="8" y1="2" x2="8" y2="6"/>
+              <line x1="3" y1="10" x2="21" y2="10"/>
+              <path d="M12 14v4M10 16h4"/>
+            </svg>
+            <span data-i18n="btnAddToCalendar">காலெண்டரில் சேர்க்க (Add to Calendar)</span>
+          </button>
+
+          <!-- Calendar Dropdown Options Modal -->
+          <div class="calendar-dropdown" id="calendar-dropdown-menu" role="menu">
+            <!-- Google Calendar Direct Web Link -->
+            <a href="#" class="calendar-option-item" id="cal-opt-google" role="menuitem" target="_blank" rel="noopener noreferrer">
+              <svg class="calendar-option-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/>
+              </svg>
+              <span>Google Calendar</span>
+            </a>
+            
+            <!-- Apple / iOS Calendar (.ics download) -->
+            <button type="button" class="calendar-option-item" id="cal-opt-apple" role="menuitem">
+              <svg class="calendar-option-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.61-.75 1.04-1.8 0.92-2.87-.9.04-2 .6-2.63 1.34-.56.64-1.05 1.7-0.92 2.74 1.01.08 2.03-.51 2.63-1.21z"/>
+              </svg>
+              <span>Apple Calendar (.ics)</span>
+            </button>
+
+            <!-- Outlook Calendar (.ics download) -->
+            <button type="button" class="calendar-option-item" id="cal-opt-outlook" role="menuitem">
+              <svg class="calendar-option-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M21.5 4H9.5C8.67 4 8 4.67 8 5.5v13c0 .83.67 1.5 1.5 1.5h12c.83 0 1.5-.67 1.5-1.5v-13c0-.83-.67-1.5-1.5-1.5zM21 18H10V6h11v12zM2.5 7h5v2h-5zM2.5 11h5v2h-5zM2.5 15h5v2h-5z"/>
+              </svg>
+              <span>Microsoft Outlook</span>
+            </button>
+
+            <!-- Yahoo Calendar -->
+            <a href="#" class="calendar-option-item" id="cal-opt-yahoo" role="menuitem" target="_blank" rel="noopener noreferrer">
+              <svg class="calendar-option-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+              </svg>
+              <span>Yahoo Calendar</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Ornamental Section Divider -->
+    <div class="section-divider-ornament" aria-hidden="true">
+      <div class="divider-line"></div>
+      <div class="divider-knot"></div>
+      <div class="divider-line"></div>
+    </div>
+
+    <!-- ==========================================================================
+         COMPLETE EVENT SCHEDULE (நிகழ்ச்சி நிரல்)
+         Day 1: 14.11.2026 (Saturday) & Day 2: 15.11.2026 (Sunday)
+         ========================================================================== -->
+    <section class="schedule-section" id="schedule">
+      
+      <div class="section-header">
+        <span class="section-tag" data-i18n="scheduleTag">சுப நிகழ்வுகள்</span>
+        <h2 class="section-title" data-i18n="scheduleTitle">நிகழ்ச்சி நிரல்</h2>
+        <p class="section-subtitle" data-i18n="scheduleSub">
+          மங்கலத் திருமண விழாக்களின் விரிவான நேர அட்டவணை
+        </p>
+      </div>
+
+      <!-- Schedule Filter Tabs -->
+      <div class="schedule-tabs-wrapper" role="tablist" aria-label="Schedule Filter">
+        <button type="button" class="schedule-tab-btn active" id="tab-all" role="tab" aria-selected="true" data-tab="all" data-i18n="tabAll">
+          அனைத்து நிகழ்வுகள் (All Events)
+        </button>
+        <button type="button" class="schedule-tab-btn" id="tab-day1" role="tab" aria-selected="false" data-tab="day1" data-i18n="tabDay1">
+          நாள் 1: 14.11.2026 (சனிக்கிழமை)
+        </button>
+        <button type="button" class="schedule-tab-btn" id="tab-day2" role="tab" aria-selected="false" data-tab="day2" data-i18n="tabDay2">
+          நாள் 2: 15.11.2026 (ஞாயிற்றுக்கிழமை)
+        </button>
+      </div>
+
+      <!-- DAY 1 BLOCK: 14.11.2026 (Saturday / சனிக்கிழமை) -->
+      <div class="schedule-day-block" id="block-day1">
+        
+        <div class="schedule-day-banner">
+          <div>
+            <h3 class="day-banner-title" data-i18n="day1Title">நாள் 1: 14.11.2026 - சனிக்கிழமை</h3>
+            <span class="day-banner-date" data-i18n="day1Sub">சுப காரியங்கள் &amp; மணமகள் - மணமகன் வரவேற்பு</span>
+          </div>
+          <span class="day-banner-badge" data-i18n="day1Badge">Day 1 • Saturday</span>
+        </div>
+
+        <div class="timeline-container">
+          
+          <!-- Day 1 Event 1: நிச்சயதார்த்தம் (Engagement) -->
+          <article class="timeline-event-card">
+            <span class="timeline-node" aria-hidden="true"></span>
+            <div class="event-header-row">
+              <div class="event-name-group">
+                <div class="event-icon-circle" aria-hidden="true">
+                  <!-- Ring Icon -->
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="14" r="7"/>
+                    <path d="M12 2l3 5H9l3-5z" fill="currentColor"/>
+                  </svg>
+                </div>
+                <h4 class="event-title" data-i18n="ev1Title">1. நிச்சயதார்த்தம் (Engagement)</h4>
+              </div>
+              <div class="event-time-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polyline points="12 6 12 12 16 14"/>
+                </svg>
+                <span data-i18n="ev1Time">காலை 7.35 - 9.00 மணி (7:35 AM - 9:00 AM)</span>
+              </div>
+            </div>
+            <p class="event-description" data-i18n="ev1Desc">
+              உற்றார் உறவினர்கள் முன்னிலையில் தாம்பூலம் மாற்றி திருமண உறுதி செய்யும் மங்கல வைபவம்.
+            </p>
+          </article>
+
+          <!-- Day 1 Event 2: முகூர்த்தக்கால் (Muhurthakkal) -->
+          <article class="timeline-event-card">
+            <span class="timeline-node" aria-hidden="true"></span>
+            <div class="event-header-row">
+              <div class="event-name-group">
+                <div class="event-icon-circle" aria-hidden="true">
+                  <!-- Holy Pot / Plant Icon -->
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 3v18M8 8c0 3 4 4 4 4s4-1 4-4M6 15c0 3 6 4 6 4s6-1 6-4"/>
+                  </svg>
+                </div>
+                <h4 class="event-title" data-i18n="ev2Title">2. முகூர்த்தக்கால் (Muhurthakkal)</h4>
+              </div>
+              <div class="event-time-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polyline points="12 6 12 12 16 14"/>
+                </svg>
+                <span data-i18n="ev2Time">காலை 10.30 - 11.00 மணி (10:30 AM - 11:00 AM)</span>
+              </div>
+            </div>
+            <p class="event-description" data-i18n="ev2Desc">
+              மங்கல நடுகை நட்டு சுபகாரியங்களை இனிதே ஆரம்பிக்கும் தெய்வீகப் பாரம்பரிய சடங்கு.
+            </p>
+          </article>
+
+          <!-- Day 1 Event 3: பட்டினிசாத விருந்து (Pattinisadha Feast) -->
+          <article class="timeline-event-card">
+            <span class="timeline-node" aria-hidden="true"></span>
+            <div class="event-header-row">
+              <div class="event-name-group">
+                <div class="event-icon-circle" aria-hidden="true">
+                  <!-- Feast Plate Icon -->
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="9"/>
+                    <path d="M7 12c1.5 2 3.5 3 5 3s3.5-1 5-3"/>
+                  </svg>
+                </div>
+                <h4 class="event-title" data-i18n="ev3Title">3. பட்டினிசாத விருந்து (Pattinisadha Feast)</h4>
+              </div>
+              <div class="event-time-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polyline points="12 6 12 12 16 14"/>
+                </svg>
+                <span data-i18n="ev3Time">மதியம் 12.30 - 1.30 மணி (12:30 PM - 1:30 PM)</span>
+              </div>
+            </div>
+            <p class="event-description" data-i18n="ev3Desc">
+              உறவுகளோடு ஒன்று கூடி மகிழும் பாரம்பரிய அறுசுவை தென்னிந்திய உச்சிவேளை விருந்து.
+            </p>
+          </article>
+
+          <!-- Day 1 Event 4: மாப்பிள்ளை அழைப்பு (Groom Reception) -->
+          <article class="timeline-event-card">
+            <span class="timeline-node" aria-hidden="true"></span>
+            <div class="event-header-row">
+              <div class="event-name-group">
+                <div class="event-icon-circle" aria-hidden="true">
+                  <!-- Music / Chariot Icon -->
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="6" cy="18" r="3"/>
+                    <circle cx="18" cy="16" r="3"/>
+                    <path d="M9 18V6l12-2v12"/>
+                  </svg>
+                </div>
+                <h4 class="event-title" data-i18n="ev4Title">4. மாப்பிள்ளை அழைப்பு (Groom Reception / Janavasam)</h4>
+              </div>
+              <div class="event-time-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polyline points="12 6 12 12 16 14"/>
+                </svg>
+                <span data-i18n="ev4Time">மாலை 3.00 - 4.00 மணி (3:00 PM - 4:00 PM)</span>
+              </div>
+            </div>
+            <p class="event-description" data-i18n="ev4Desc">
+              மேளதாளங்கள் முழங்க, மலர் மாலைகளுடன் மணமகனை மண்டபத்திற்கு வரவேற்கும் பாரம்பரிய ஜானவாசம்.
+            </p>
+          </article>
+
+          <!-- Day 1 Event 5: வரவேற்பு (Grand Reception) -->
+          <article class="timeline-event-card">
+            <span class="timeline-node" aria-hidden="true"></span>
+            <div class="event-header-row">
+              <div class="event-name-group">
+                <div class="event-icon-circle" aria-hidden="true">
+                  <!-- Sparkles / Stage Icon -->
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="12 2 15 8.5 22 9.5 17 14.5 18.5 21.5 12 18 5.5 21.5 7 14.5 2 9.5 9 8.5 12 2"/>
+                  </svg>
+                </div>
+                <h4 class="event-title" data-i18n="ev5Title">5. வரவேற்பு (Grand Reception)</h4>
+              </div>
+              <div class="event-time-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polyline points="12 6 12 12 16 14"/>
+                </svg>
+                <span data-i18n="ev5Time">மாலை 6.00 - 9.00 மணி (6:00 PM - 9:00 PM)</span>
+              </div>
+            </div>
+            <p class="event-description" data-i18n="ev5Desc">
+              இசை அலைகளுடன் மணமக்களை வாழ்த்தி வரவேற்கும் வண்ணமிகு மாலை வரவேற்பு மற்றும் சிறப்பு இரவு விருந்து.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+
+      <!-- DAY 2 BLOCK: 15.11.2026 (Sunday / ஞாயிற்றுக்கிழமை) -->
+      <div class="schedule-day-block" id="block-day2">
+        
+        <div class="schedule-day-banner">
+          <div>
+            <h3 class="day-banner-title" data-i18n="day2Title">நாள் 2: 15.11.2026 - ஞாயிற்றுக்கிழமை</h3>
+            <span class="day-banner-date" data-i18n="day2Sub">புனித சுபமுகூர்த்தம் &amp; சம்பந்தி விருந்து</span>
+          </div>
+          <span class="day-banner-badge" data-i18n="day2Badge">Day 2 • Sunday</span>
+        </div>
+
+        <div class="timeline-container">
+          
+          <!-- Day 2 Event 1: சுபமுகூர்த்தம் (Subamuhurtham) - PRIME CARD -->
+          <article class="timeline-event-card muhurtham-prime">
+            <span class="timeline-node" aria-hidden="true"></span>
+            <div class="event-header-row">
+              <div class="event-name-group">
+                <div class="event-icon-circle" aria-hidden="true">
+                  <!-- Sacred Thali / Sacred Knot Icon -->
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2L15 8H9L12 2Z" fill="currentColor"/>
+                    <path d="M8 8C5 12 5 18 12 22C19 18 19 12 16 8"/>
+                    <circle cx="12" cy="13" r="2.5" fill="currentColor"/>
+                  </svg>
+                </div>
+                <h4 class="event-title" data-i18n="ev6Title">1. சுபமுகூர்த்தம் (Subamuhurtham)</h4>
+              </div>
+              <div class="event-time-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polyline points="12 6 12 12 16 14"/>
+                </svg>
+                <span data-i18n="ev6Time">அதிகாலை 5.00 - 6.00 மணி (5:00 AM - 6:00 AM)</span>
+              </div>
+            </div>
+            <p class="event-description" data-i18n="ev6Desc">
+              வேதமந்திரங்கள், கெட்டிமேளம் மற்றும் நாகஸ்வர மங்கல வாத்தியங்கள் முழங்க, துலாம் லக்னத்தில் மங்கல நாண் (திருமாங்கல்யம்) பூட்டும் தெய்வீகத் தருணம்.
+            </p>
+          </article>
+
+          <!-- Day 2 Event 2: சம்பந்தி விருந்து (Sambandhi Feast) -->
+          <article class="timeline-event-card">
+            <span class="timeline-node" aria-hidden="true"></span>
+            <div class="event-header-row">
+              <div class="event-name-group">
+                <div class="event-icon-circle" aria-hidden="true">
+                  <!-- Banana Leaf Dining Icon -->
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 17c3-3 7-4 11-4s7 1 7 4"/>
+                    <path d="M12 3v10"/>
+                    <circle cx="12" cy="18" r="3"/>
+                  </svg>
+                </div>
+                <h4 class="event-title" data-i18n="ev7Title">2. சம்பந்தி விருந்து (Sambandhi Feast)</h4>
+              </div>
+              <div class="event-time-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polyline points="12 6 12 12 16 14"/>
+                </svg>
+                <span data-i18n="ev7Time">மதியம் 12.00 மணி முதல் (12:00 PM Onwards)</span>
+              </div>
+            </div>
+            <p class="event-description" data-i18n="ev7Desc">
+              புதிய மணமக்களுக்கு வாழ்த்துகளைத் தெரிவித்து, சுவையான கல்யாண விருந்துண்டு மகிழும் நன்னாழிகை.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+
+      <!-- Schedule Footer Note (தங்கள் நல்வரவை விரும்பும்...) -->
+      <div class="schedule-footer-card">
+        <p class="schedule-footer-text" data-i18n="scheduleFooterNote">
+          "தங்கள் நல்வரவை விரும்பும் - இல்லம் நிறைந்த சொந்தங்களும்... உள்ளம் நிறைந்த நண்பர்களும்..."
+        </p>
+        <p class="schedule-footer-sub" data-i18n="scheduleFooterSub">
+          With heartfelt welcome and warmest anticipation by our loving family and cherished friends.
+        </p>
+      </div>
+
+    </section>
+
+    <!-- Ornamental Section Divider -->
+    <div class="section-divider-ornament" aria-hidden="true">
+      <div class="divider-line"></div>
+      <div class="divider-knot"></div>
+      <div class="divider-line"></div>
+    </div>
+
+    <!-- ==========================================================================
+         VENUE & INTERACTIVE LOCATION AREA
+         Sri Velan Mahal, Avalpoondurai, Erode
+         ========================================================================== -->
+    <section class="venue-section" id="venue">
+      
+      <div class="section-header">
+        <span class="section-tag" data-i18n="venueTag">Wedding Venue &amp; Location</span>
+        <h2 class="section-title" data-i18n="venueTitle">The Wedding Venue</h2>
+        <p class="section-subtitle" data-i18n="venueSub">
+          The grand hall where sacred wedding vows will be solemnized
+        </p>
+      </div>
+
+      <div class="venue-card-wrapper">
+        
+        <!-- Venue Details Side -->
+        <div class="venue-info-side">
+          
+          <span class="venue-badge" data-i18n="venueBadge">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+            </svg>
+            <span data-i18n="venueBadgeText">Marriage Convention Hall</span>
+          </span>
+
+          <h3 class="venue-title" data-i18n="venueName">Sri Velan Mahal</h3>
+          
+          <div class="venue-type-tag" data-i18n="venueType">
+            Grand Central A/C Convention Center &amp; Dining Hall
+          </div>
+
+          <!-- Full Address Box -->
+          <div class="venue-address-box">
+            <p class="address-text-line" id="venue-full-address" data-i18n="venueAddress">
+              Kalipalayam Main Street, Avalpoondurai, Erode, Tamil Nadu - 638115
+            </p>
+            <p class="address-landmark" data-i18n="venueLandmark">
+              Landmark: Avalpoondurai, Erode
+            </p>
+          </div>
+
+          <!-- Amenity Highlights -->
+          <div class="venue-amenities">
+            <div class="amenity-chip">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+              <span data-i18n="amenityAc">Fully Central Air Conditioned</span>
+            </div>
+            <div class="amenity-chip">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/></svg>
+              <span data-i18n="amenityParking">300+ Valet Car Parking Facility</span>
+            </div>
+            <div class="amenity-chip">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11 9H9V2H7v7H5V2H3v7c0 2.12 1.66 3.84 3.75 3.97V22h2.5v-9.03C11.34 12.84 13 11.12 13 9V2h-2v7zm5-3v8h2.5v8H21V2c-2.76 0-5 2.24-5 4z"/></svg>
+              <span data-i18n="amenityDining">800+ Seating Banquet Dining Hall</span>
+            </div>
+          </div>
+
+          <!-- Interactive Action Buttons -->
+          <div class="venue-action-buttons">
+            
+            <a href="https://maps.app.goo.gl/e3mvxjhmbH4wuC3p8" 
+               class="btn-directions" 
+               id="btn-google-directions" 
+               target="_blank" 
+               rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="3 11 22 2 13 21 11 13 3 11"/>
+              </svg>
+              <span data-i18n="btnDirections">Get Directions (Google Maps)</span>
+            </a>
+
+            <button type="button" class="btn-copy-address" id="btn-copy-address">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+              </svg>
+              <span id="copy-btn-text" data-i18n="btnCopyAddress">Copy Address</span>
+            </button>
+
+          </div>
+
+        </div>
+
+        <!-- Integrated Google Maps Card -->
+        <div class="venue-map-side">
+          <iframe 
+            class="venue-map-iframe"
+            title="Google Map Venue Location"
+            src="https://maps.google.com/maps?q=Sri+Velan+Mahal,+Avalpoondurai,+Erode&t=&z=15&ie=UTF8&iwloc=&output=embed"
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Ornamental Section Divider -->
+    <div class="section-divider-ornament" aria-hidden="true">
+      <div class="divider-line"></div>
+      <div class="divider-center-icon">
+        <svg class="peacock-feather-icon" viewBox="0 0 50 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="25" cy="22" rx="16" ry="19" fill="url(#peacockGoldEye)" stroke="#FFE8A3" stroke-width="1"/>
+          <ellipse cx="25" cy="23" rx="11" ry="13" fill="url(#peacockTealEye)"/>
+          <ellipse cx="25" cy="24" rx="5" ry="6" fill="#01131C"/>
+          <circle cx="25" cy="22" r="1.5" fill="#48E5C2"/>
+          <path d="M25 65 C25 45 25 25 25 5" stroke="#F4A261" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="divider-line"></div>
+    </div>
+
+    <!-- ==========================================================================
+         SACRED BLESSINGS & MANGALYA DHARANAM SHLOKA SECTION
+         ========================================================================== -->
+    <section class="blessings-section" id="blessings">
+      
+      <div class="blessings-card">
+        
+        <svg class="blessings-vel-emblem" viewBox="0 0 60 90" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M30 4 C18 18 10 32 10 46 C10 56 18 62 26 62 L26 84 C26 86 28 88 30 88 C32 88 34 86 34 84 L34 62 C42 62 50 56 50 46 C50 32 42 18 30 4 Z" fill="url(#velGoldRadiant)" stroke="#FFF9D2" stroke-width="1.6"/>
+          <circle cx="30" cy="34" r="3.5" fill="#FFF9D2"/>
+        </svg>
+
+        <p class="sacred-shloka-verse" data-i18n="shlokaVerse">
+          மாங்கல்யம் தந்துனானேன மம ஜீவன ஹேதுனா |<br>
+          கண்டே பத்னாமி சுபகே சஞ்சீவ சரதச் சதம் ||
+        </p>
+
+        <p class="shloka-meaning" data-i18n="shlokaMeaning">
+          "என் வாழ்வின் ஆதாரமாகிய இந்த மங்கலத் திருநாணை நின் திருக்கழுத்தில் பூட்டுகின்றேன். அன்பும் அறமும் தழைக்க நாம் நூறாண்டுகள் நல்வாழ்வு வாழ்வோமாக!"
+        </p>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       SITE FOOTER WITH TRADITIONAL KOLAM WATERMARK
+       ========================================================================== -->
+  <footer class="site-footer">
+    
+    <!-- Kolam Background Watermark -->
+    <svg class="footer-kolam-watermark" viewBox="0 0 200 200" fill="none" stroke="#F4A261" stroke-width="1" stroke-dasharray="3 3">
+      <circle cx="100" cy="100" r="80"/>
+      <circle cx="100" cy="100" r="50"/>
+      <polygon points="100,20 180,100 100,180 20,100"/>
+      <polygon points="100,35 165,100 100,165 35,100"/>
+    </svg>
+
+    <div class="footer-content">
+      
+      <div class="footer-names" data-i18n="footerNames">Sri Charan &amp; Pradeepika</div>
+      
+      <p class="footer-welcome-line" data-i18n="footerWelcome">
+        Your presence is our cherished blessing. We warmly invite you to join and celebrate with us.
+      </p>
+
+      <div class="footer-families-list">
+        <div>
+          <strong data-i18n="footerKathirvel">Kathirvel Family</strong>
+          <div data-i18n="footerKathirvelLoc">Erode</div>
+        </div>
+        <div>
+          <strong data-i18n="footerRaghupathi">Raghupathi Family</strong>
+          <div data-i18n="footerRaghupathiLoc">Erode</div>
+        </div>
+      </div>
+
+      <div class="footer-copyright" data-i18n="footerCopyright">
+        15.11.2026 • சுபமுகூர்த்த நன்னாள் • எல்லாம் சிவமயம்
+      </div>
+
+    </div>
+
+  </footer>
+
+  <!-- Toast Notification -->
+  <div class="toast-notification" id="toast-notify" role="alert" aria-live="polite">
+    <svg class="toast-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+      <polyline points="22 4 12 14.01 9 11.01"/>
+    </svg>
+    <span id="toast-message">முகவரி நகலெடுக்கப்பட்டது!</span>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
