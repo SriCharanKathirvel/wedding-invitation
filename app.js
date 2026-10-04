@@ -12,7 +12,7 @@
   // ==========================================================================
   const translations = {
     ta: {
-      headerShloka: 'ஓம் சரவணபவ',
+      headerShloka: 'சரண் <span class="heart-icon">❤️</span> தீபு',
       headerSub: 'சுபமுகூர்த்த அழைப்பிதழ்',
       navHome: 'முகப்பு',
       navCountdown: 'கவுண்டவுன்',
@@ -21,12 +21,11 @@
       navBlessings: 'ஆசிகள்',
       audioPlay: 'மங்கல இசை',
       audioPause: 'இசை நிறுத்து',
-      heroBlessing: '|| எல்லாம் சிவமயம் || ஓம் சரவணபவ ||',
+      heroBlessing: 'வேலும் மயிலும் துணை',
       heroSubBlessing: 'இறைவன் திருவருளாலும் பெரியோர்களின் நல்லாசியாலும்',
       invitationSuper: 'மங்கலத் திருமண அழைப்பிதழ்',
       invitationMain: 'திருமண அழைப்பிதழ்',
       heroQuote: '"இரு மனங்கள் இணையும் இல்லறத் தொடக்க விழாவிற்கு தங்களை அன்போடு அழைக்கின்றோம்"',
-      attireTraditional: 'பாரம்பரிய பட்டு வேஷ்டி & காஞ்சிபுரம் பட்டுப்புடவை',
       groomName: 'ஸ்ரீ சரண்',
       brideName: 'பிரதீபிகா',
       groomLabel: 'மணமகன்',
@@ -44,68 +43,56 @@
       labelHours: 'மணி',
       labelMinutes: 'நிமிடம்',
       labelSeconds: 'நொடி',
-      btnAddToCalendar: 'காலெண்டரில் சேர்க்க (Add to Calendar)',
+      btnAddToCalendar: 'காலெண்டரில் சேர்க்க',
       scheduleTag: 'சுப நிகழ்வுகள்',
       scheduleTitle: 'நிகழ்ச்சி நிரல்',
       scheduleSub: 'மங்கலத் திருமண விழாக்களின் விரிவான நேர அட்டவணை',
-      tabAll: 'அனைத்து நிகழ்வுகள் (All Events)',
+      tabAll: 'அனைத்து நிகழ்வுகள்',
       tabDay1: 'நாள் 1: 14.11.2026 (சனிக்கிழமை)',
       tabDay2: 'நாள் 2: 15.11.2026 (ஞாயிற்றுக்கிழமை)',
       day1Title: 'நாள் 1: 14.11.2026 - சனிக்கிழமை',
       day1Sub: 'சுப காரியங்கள் & மணமகள் - மணமகன் வரவேற்பு',
-      day1Badge: 'Day 1 • சனிக்கிழமை',
-      ev1Title: '1. நிச்சயதார்த்தம் (Engagement)',
-      ev1Time: 'காலை 7.35 - 9.00 மணி (7:35 AM - 9:00 AM)',
-      ev1Desc: 'உற்றார் உறவினர்கள் முன்னிலையில் தாம்பூலம் மாற்றி திருமண உறுதி செய்யும் மங்கல வைபவம்.',
-      ev2Title: '2. முகூர்த்தக்கால் (Muhurthakkal)',
-      ev2Time: 'காலை 10.30 - 11.00 மணி (10:30 AM - 11:00 AM)',
-      ev2Desc: 'மங்கல நடுகை நட்டு சுபகாரியங்களை இனிதே ஆரம்பிக்கும் தெய்வீகப் பாரம்பரிய சடங்கு.',
-      ev3Title: '3. பட்டினிசாத விருந்து (Pattinisadha Feast)',
-      ev3Time: 'மதியம் 12.30 - 1.30 மணி (12:30 PM - 1:30 PM)',
-      ev3Desc: 'உறவுகளோடு ஒன்று கூடி மகிழும் பாரம்பரிய அறுசுவை தென்னிந்திய உச்சிவேளை விருந்து.',
-      ev4Title: '4. மாப்பிள்ளை அழைப்பு (Groom Reception / Janavasam)',
-      ev4Time: 'மாலை 3.00 - 4.00 மணி (3:00 PM - 4:00 PM)',
-      ev4Desc: 'மேளதாளங்கள் முழங்க, மலர் மாலைகளுடன் மணமகனை மண்டபத்திற்கு வரவேற்கும் பாரம்பரிய ஜானவாசம்.',
-      ev5Title: '5. வரவேற்பு (Grand Reception)',
-      ev5Time: 'மாலை 6.00 - 9.00 மணி (6:00 PM - 9:00 PM)',
-      ev5Desc: 'இசை அலைகளுடன் மணமக்களை வாழ்த்தி வரவேற்கும் வண்ணமிகு மாலை வரவேற்பு மற்றும் சிறப்பு இரவு விருந்து.',
+      day1Badge: 'நாள் 1 • சனிக்கிழமை',
+      ev1Title: '1. நிச்சயதார்த்தம்',
+      ev1Time: 'காலை 7.35 - 9.00 மணி',
+      ev2Title: '2. முகூர்த்தக்கால்',
+      ev2Time: 'காலை 10.30 - 11.00 மணி',
+      ev3Title: '3. பட்டினிசாத விருந்து',
+      ev3Time: 'மதியம் 12.30 - 1.30 மணி',
+      ev4Title: '4. மாப்பிள்ளை அழைப்பு',
+      ev4Time: 'மாலை 3.00 - 4.00 மணி',
+      ev5Title: '5. வரவேற்பு',
+      ev5Time: 'மாலை 6.00 - 9.00 மணி',
       day2Title: 'நாள் 2: 15.11.2026 - ஞாயிற்றுக்கிழமை',
       day2Sub: 'புனித சுபமுகூர்த்தம் & சம்பந்தி விருந்து',
-      day2Badge: 'Day 2 • ஞாயிற்றுக்கிழமை',
-      ev6Title: '1. சுபமுகூர்த்தம் (Subamuhurtham)',
-      ev6Time: 'அதிகாலை 5.00 - 6.00 மணி (5:00 AM - 6:00 AM)',
-      ev6Desc: 'வேதமந்திரங்கள், கெட்டிமேளம் மற்றும் நாகஸ்வர மங்கல வாத்தியங்கள் முழங்க, துலாம் லக்னத்தில் மங்கல நாண் (திருமாங்கல்யம்) பூட்டும் தெய்வீகத் தருணம்.',
-      ev7Title: '2. சம்பந்தி விருந்து (Sambandhi Feast)',
-      ev7Time: 'மதியம் 12.00 மணி முதல் (12:00 PM Onwards)',
-      ev7Desc: 'புதிய மணமக்களுக்கு வாழ்த்துகளைத் தெரிவித்து, சுவையான கல்யாண விருந்துண்டு மகிழும் நன்னாழிகை.',
+      day2Badge: 'நாள் 2 • ஞாயிற்றுக்கிழமை',
+      ev6Title: '1. சுபமுகூர்த்தம்',
+      ev6Time: 'அதிகாலை 5.00 - 6.00 மணி',
+      ev7Title: '2. சம்பந்தி விருந்து',
+      ev7Time: 'மதியம் 12.00 மணி முதல்',
       scheduleFooterNote: '"தங்கள் நல்வரவை விரும்பும் - இல்லம் நிறைந்த சொந்தங்களும்... உள்ளம் நிறைந்த நண்பர்களும்..."',
       scheduleFooterSub: 'எங்கள் குடும்பத்தின் இந்த மகிழ்ச்சியான தருணத்தில் தங்களின் பொன்னான வருகையை வேண்டி விரும்பி அழைக்கின்றோம்.',
       venueTag: 'திருமண அரங்கம் & அமைவிடம்',
       venueTitle: 'திருமண மண்டபம்',
       venueSub: 'மங்களகரமான விழா நடைபெறும் அருள்மிகு அரங்கம்',
-      venueBadgeText: 'கல்யாண மஹால்',
       venueName: 'ஸ்ரீ வேலன் மஹால்',
-      venueType: 'Grand Central A/C Convention Center & Dining Hall',
       venueAddress: 'காளிபாளையம் மெயின் ரோடு, அவல்பூந்துறை, ஈரோடு, தமிழ்நாடு - 638115',
       venueLandmark: 'அடையாளம்: அவல்பூந்துறை, ஈரோடு',
-      amenityAc: 'முழுமையாக குளிர்சாதனம் (Central A/C)',
-      amenityParking: '300+ கார்கள் நிறுத்துமிடம் (Valet Parking)',
-      amenityDining: '800+ விருந்தினர் உணவுக்கூடம்',
-      btnDirections: 'வழிசெலுத்தல் (Get Directions)',
-      btnCopyAddress: 'முகவரியை நகலெடு (Copy Address)',
+      btnDirections: 'வழிசெலுத்தல்',
+      btnCopyAddress: 'முகவரியை நகலெடு',
       copiedSuccess: 'முகவரி வெற்றிகரமாக நகலெடுக்கப்பட்டது!',
-      shlokaVerse: 'மாங்கல்யம் தந்துனானேன மம ஜீவன ஹேதுனா |<br>கண்டே பத்னாமி சுபகே சஞ்சீவ சரதச் சதம் ||',
-      shlokaMeaning: '"என் வாழ்வின் ஆதாரமாகிய இந்த மங்கலத் திருநாணை நின் திருக்கழுத்தில் பூட்டுகின்றேன். அன்பும் அறமும் தழைக்க நாம் நூறாண்டுகள் நல்வாழ்வு வாழ்வோமாக!"',
-      footerNames: 'ஸ்ரீ சரண் & பிரதீபிகா',
+      shlokaVerse: 'அன்பும் அறனும் உடைத்தாயின் இல்வாழ்க்கை<br>பண்பும் பயனும் அது.',
+      shlokaMeaning: '"இல்வாழ்க்கை அன்பும் அறமும் உடையதாக விளங்குமானால், அதுவே அதன் பண்பும் பயனும் ஆகும்."',
+      footerNames: 'சரண் <span class="heart-icon">❤️</span> தீபு',
       footerWelcome: 'தங்கள் வரவு எங்கள் வாழ்வின் வசந்தம்! அனைவரும் வருகை தந்து மணமக்களை வாழ்த்த வேண்டுகிறோம்.',
       footerKathirvel: 'கதிர்வேல் குடும்பத்தினர்',
       footerKathirvelLoc: 'ஈரோடு',
       footerRaghupathi: 'ரகுபதி குடும்பத்தினர்',
       footerRaghupathiLoc: 'ஈரோடு',
-      footerCopyright: '15.11.2026 • சுபமுகூர்த்த நன்னாள் • எல்லாம் சிவமயம்'
+      footerCopyright: '15.11.2026 • சுபமுகூர்த்த நன்னாள் • வேலும் மயிலும் துணை'
     },
     en: {
-      headerShloka: 'OM SARAVANA BHAVA',
+      headerShloka: 'Charan <span class="heart-icon">❤️</span> Deepu',
       headerSub: 'Auspicious Wedding Invitation',
       navHome: 'Home',
       navCountdown: 'Countdown',
@@ -114,12 +101,11 @@
       navBlessings: 'Blessings',
       audioPlay: 'Wedding Music',
       audioPause: 'Pause Music',
-      heroBlessing: '|| SEEKING DIVINE BLESSINGS || OM SARAVANA BHAVA ||',
+      heroBlessing: 'VELUM MAYILUM THUNAI',
       heroSubBlessing: 'With the divine grace of Almighty and elders’ cherished blessings',
       invitationSuper: 'The Auspicious Union',
       invitationMain: 'Wedding Invitation',
       heroQuote: '"Two souls, one heart — we cordially invite you to celebrate the joyous dawn of our lifelong journey together."',
-      attireTraditional: 'Navy Blue Suit & Peacock Blue Kanchipuram Silk Saree',
       groomName: 'Sri Charan',
       brideName: 'Pradeepika',
       groomLabel: 'Groom',
@@ -147,55 +133,43 @@
       day1Title: 'Day 1: 14.11.2026 - Saturday',
       day1Sub: 'Auspicious Preludes & Grand Evening Reception',
       day1Badge: 'Day 1 • Saturday',
-      ev1Title: '1. நிச்சயதார்த்தம் (Engagement Ceremony)',
+      ev1Title: '1. Engagement Ceremony',
       ev1Time: '7:35 AM - 9:00 AM',
-      ev1Desc: 'Sacred formal agreement and exchange of Thamboolam in the presence of family and elders.',
-      ev2Title: '2. முகூர்த்தக்கால் (Muhurthakkal Ceremony)',
+      ev2Title: '2. Muhurthakkal Ceremony',
       ev2Time: '10:30 AM - 11:00 AM',
-      ev2Desc: 'Planting of the sacred sanctified bamboo pole to invoke blessings for an auspicious celebration.',
-      ev3Title: '3. பட்டினிசாத விருந்து (Pattinisadha Feast)',
+      ev3Title: '3. Pattinisadha Feast',
       ev3Time: '12:30 PM - 1:30 PM',
-      ev3Desc: 'Sumptuous traditional South Indian afternoon feast on fresh plantain leaves for relatives and guests.',
-      ev4Title: '4. மாப்பிள்ளை அழைப்பு (Groom Reception / Janavasam)',
+      ev4Title: '4. Groom Reception',
       ev4Time: '3:00 PM - 4:00 PM',
-      ev4Desc: 'Ceremonial welcoming procession of the Groom to the wedding hall accompanied by traditional melodies.',
-      ev5Title: '5. வரவேற்பு (Grand Evening Reception)',
+      ev5Title: '5. Grand Evening Reception',
       ev5Time: '6:00 PM - 9:00 PM',
-      ev5Desc: 'An enchanting evening of live classical music, guest greetings, and a royal banquet dinner.',
       day2Title: 'Day 2: 15.11.2026 - Sunday',
       day2Sub: 'The Holy Subamuhurtham & Sambandhi Royal Feast',
       day2Badge: 'Day 2 • Sunday',
-      ev6Title: '1. சுபமுகூர்த்தம் (Subamuhurtham - Sacred Knot)',
-      ev6Time: '5:00 AM - 6:00 AM IST (Early Morning)',
-      ev6Desc: 'The sacred tying of the Thirumangalyam during the auspicious Thula Lagnam amidst Vedic chants, Nadaswaram and Getti Melam.',
-      ev7Title: '2. சம்பந்தி விருந்து (Sambandhi Feast)',
-      ev7Time: '12:00 PM Onwards (Afternoon)',
-      ev7Desc: 'Traditional grand wedding feast celebrating the eternal union of the newlyweds with culinary delicacies.',
+      ev6Title: '1. Subamuhurtham',
+      ev6Time: '5:00 AM - 6:00 AM IST',
+      ev7Title: '2. Sambandhi Feast',
+      ev7Time: '12:00 PM Onwards',
       scheduleFooterNote: '"Heartfelt welcome by loving family and friends..."',
       scheduleFooterSub: 'Your gracious presence and heartfelt blessings will be the greatest gift to us as we begin this new chapter.',
       venueTag: 'Wedding Venue & Location',
       venueTitle: 'The Wedding Venue',
       venueSub: 'The grand hall where sacred wedding vows will be solemnized',
-      venueBadgeText: 'Marriage Convention Hall',
       venueName: 'Sri Velan Mahal',
-      venueType: 'Grand Central A/C Convention Center & Dining Hall',
       venueAddress: 'Kalipalayam Main Street, Avalpoondurai, Erode, Tamil Nadu - 638115',
       venueLandmark: 'Landmark: Avalpoondurai, Erode',
-      amenityAc: 'Fully Central Air Conditioned',
-      amenityParking: '300+ Valet Car Parking Facility',
-      amenityDining: '800+ Seating Banquet Dining Hall',
       btnDirections: 'Get Directions (Google Maps)',
       btnCopyAddress: 'Copy Address',
       copiedSuccess: 'Address copied to clipboard successfully!',
-      shlokaVerse: 'Mangalyam tantunanena mama jivana hetuna |<br>Kanthe badhnami subhage sanjiva saradah satam ||',
-      shlokaMeaning: '"This sacred thread, the foundation of my life, I tie around your neck, O blessed one. May we live together in harmony and love for a hundred radiant years."',
-      footerNames: 'Sri Charan & Pradeepika',
+      shlokaVerse: 'Anbum aranum udaiththaayin ilvaazhkkai<br>Panbum payanum adhu.',
+      shlokaMeaning: '"When married life is guided by love and virtue, it attains true grace and purpose."',
+      footerNames: 'Charan <span class="heart-icon">❤️</span> Deepu',
       footerWelcome: 'Your presence is our cherished blessing. We warmly invite you to join and celebrate with us.',
       footerKathirvel: 'Kathirvel Family',
       footerKathirvelLoc: 'Erode',
       footerRaghupathi: 'Raghupathi Family',
       footerRaghupathiLoc: 'Erode',
-      footerCopyright: '15.11.2026 • Sacred Subamuhurtham • Om Saravana Bhava'
+      footerCopyright: '15.11.2026 • Sacred Subamuhurtham • Velum Mayilum Thunai'
     }
   };
 
@@ -209,7 +183,7 @@
   const btnLangEn = document.getElementById('btn-lang-en');
   const imgTraditional = document.getElementById('couple-img-traditional');
   const imgModern = document.getElementById('couple-img-modern');
-  const attireTag = document.getElementById('attire-tag-badge');
+  const weddingAudio = document.getElementById('wedding-audio');
   const btnAudio = document.getElementById('btn-audio-toggle');
   const audioBtnLabel = document.getElementById('audio-btn-label');
   const btnPetalToggle = document.getElementById('btn-petal-toggle');
@@ -258,7 +232,7 @@
     document.querySelectorAll('[data-i18n]').forEach((el) => {
       const key = el.getAttribute('data-i18n');
       if (dict[key]) {
-        if (dict[key].includes('<br>')) {
+        if (dict[key].includes('<')) {
           el.innerHTML = dict[key];
         } else {
           el.textContent = dict[key];
@@ -267,7 +241,7 @@
     });
 
     // 3. Update Audio button state label
-    if (audioEngine && audioEngine.isPlaying) {
+    if (typeof audioPlayer !== 'undefined' && audioPlayer.isPlaying) {
       audioBtnLabel.textContent = dict.audioPause;
     } else {
       audioBtnLabel.textContent = dict.audioPlay;
@@ -690,14 +664,70 @@
     }
   }
 
-  const audioEngine = new MangalaVathiyamEngine();
+  class WeddingAudioPlayer {
+    constructor(audioEl, synthFallback) {
+      this.audio = audioEl;
+      this.synth = synthFallback;
+      this.isPlaying = false;
+      this.useSynth = false;
+
+      if (this.audio) {
+        this.audio.addEventListener('error', () => {
+          this.useSynth = true;
+        });
+        this.audio.addEventListener('ended', () => {
+          this.isPlaying = false;
+          btnAudio.classList.remove('playing');
+          audioBtnLabel.textContent = translations[currentLang].audioPlay;
+        });
+      } else {
+        this.useSynth = true;
+      }
+    }
+
+    play() {
+      this.isPlaying = true;
+      if (!this.useSynth && this.audio) {
+        const promise = this.audio.play();
+        if (promise !== undefined) {
+          promise.catch((err) => {
+            console.warn('Audio play failed, falling back to synth:', err);
+            this.useSynth = true;
+            this.synth.play();
+          });
+        }
+      } else {
+        this.synth.play();
+      }
+    }
+
+    pause() {
+      this.isPlaying = false;
+      if (!this.useSynth && this.audio) {
+        this.audio.pause();
+      }
+      this.synth.pause();
+    }
+
+    toggle() {
+      if (this.isPlaying) {
+        this.pause();
+        return false;
+      } else {
+        this.play();
+        return true;
+      }
+    }
+  }
+
+  const audioPlayer = new WeddingAudioPlayer(weddingAudio, new MangalaVathiyamEngine());
 
   btnAudio.addEventListener('click', () => {
-    const isNowPlaying = audioEngine.toggle();
+    const isNowPlaying = audioPlayer.toggle();
     if (isNowPlaying) {
       btnAudio.classList.add('playing');
       audioBtnLabel.textContent = translations[currentLang].audioPause;
-      showToast(currentLang === 'ta' ? 'மங்கல இசை ஒலிக்கிறது...' : 'Playing traditional wedding music...');
+      showToast(currentLang === 'ta' ? 'மங்கல இசை ஒலிக்கிறது...' : 'Playing wedding music...');
     } else {
       btnAudio.classList.remove('playing');
       audioBtnLabel.textContent = translations[currentLang].audioPlay;
@@ -791,7 +821,8 @@
       this.canvas = canvas;
       this.ctx = canvas.getContext('2d');
       this.particles = [];
-      this.active = true;
+      this.active = false;
+      this.canvas.classList.add('paused');
       this.animId = null;
 
       this.resize();
